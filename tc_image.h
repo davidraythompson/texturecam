@@ -64,10 +64,10 @@ int tc_crop_image(tc_image **dst, tc_image *src, const int top,
 
 int tc_copy_image(tc_image *dst, tc_image *src);
 
-inline pixel_t tc_get(tc_image* img, const int row, const int col,
+pixel_t tc_get(tc_image* img, const int row, const int col,
                       const int chan);
 
-inline void tc_set(tc_image* img, const int row, const int col,
+void tc_set(tc_image* img, const int row, const int col,
                    const int chan, const pixel_t val);
 
 #endif
