@@ -125,7 +125,13 @@ use the subsampling option (-s 4) to make it go really fast.
 > ./tcclass -s 4 rocks.rf example/test-prep.pgm example/test-autolabel.ppm
 
 The new autolabel.ppm file represents the system's attempt to classify the
-image based on the learned random forest file.
+image based on the learned random forest file.  Colors correspond to the 
+class labels in the original training data.  In this example the blue areas 
+signify "rock" surfaces, while the red is "sediment." These predictions 
+describe the corresponding pixels of the original test image, test.pgm.  
+Note that an area at the margin of the frame remains black; the random forest 
+does not have a complete context window for those pixels, so it leaves them
+unclassified.
 
 Advanced Tricks
 --------
